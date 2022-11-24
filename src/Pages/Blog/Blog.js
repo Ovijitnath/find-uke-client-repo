@@ -43,9 +43,9 @@ const Item = ({ title, children }) => {
 
 export const Blog = () => {
     return (
-        <div className="px-4 py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 pb-5">
+        <div className="px-4 py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10 pb-5">
             <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
-                <img className='mx-auto' src={logo} style={{ width: 150, height: 180 }} alt="" />
+                <img className='mx-auto' src={logo} style={{ width: 150, height: 120 }} alt="" />
                 <div className="flex flex-col mb-16 sm:text-center">
                     <a href="/blog" className="mb-6 sm:mx-auto">
 
@@ -71,7 +71,7 @@ export const Blog = () => {
                         - <strong>Local (UI) state</strong> – Local state is data we manage in one or another component. Local state is most often managed in React using the useState hook.For example, local state would be needed to show or hide a modal component or to track values for a form component, such as form submission, when the form is disabled and the values of a form’s inputs.. <br />
                         - <strong>Global (UI) state</strong> – Global state is data we manage across multiple components.Global state is necessary when we want to get and update data anywhere in our app, or in multiple components at least.A common example of global state is authenticated user state. If a user is logged into our app, it is necessary to get and change their data throughout our application. <br />
                         - <strong>Server state</strong> – Data that comes from an external server that must be integrated with our UI state.Server state is a simple concept, but can be hard to manage alongside all of our local and global UI state.There are several pieces of state that must be managed every time you fetch or update data from an external server, including loading and error state. <br />
-                        - <strong>URL state</strong> – Data that exists on our URLs, including the pathname and query parameters. URL state is often missing as a category of state, but it is an important one.In many cases, a lot of major parts of our application rely upon accessing URL state. Try to imagine building a blog without being able to fetch a post based off of its slug or id that is located in the URL!
+                        - <strong>URL state</strong> – Data that exists on our URLs, including the pathname and query parameters. URL state is often missing as a Category of state, but it is an important one.In many cases, a lot of major parts of our application rely upon accessing URL state. Try to imagine building a blog without being able to fetch a post based off of its slug or id that is located in the URL!
                     </Item>
                     <Item title="How does prototypical inheritance work?">
                         Every object with its methods and properties contains an internal and hidden property known as <strong>[[Prototype]]</strong>. The Prototypal Inheritance is a feature in javascript used to add methods and properties in objects. It is a method by which an object can inherit the properties and methods of another object. Traditionally, in order to get and set the <strong>[[Prototype]]</strong> of an object, we use Object.getPrototypeOf and Object.setPrototypeOf. Nowadays, in modern language, it is being set using __proto__.

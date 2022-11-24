@@ -1,11 +1,13 @@
 import React from 'react';
+import Categories from '../../Categories/Categories';
 
 const Home = () => {
     return (
         <div>
             <h1>This is Home</h1>
             <section>
-                <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+                {/*changed parent div class name lg:max-w-screen-xl */}
+                <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full  md:px-24 lg:px-8 lg:py-20">
                     <div className="grid gap-5 row-gap-8 lg:grid-cols-2">
                         <div className="flex flex-col justify-center">
                             <div className="max-w-xl mb-6">
@@ -62,6 +64,9 @@ const Home = () => {
                 </div>
 
             </section>
+
+            <Categories></Categories>
+
 
             <section>
                 <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">

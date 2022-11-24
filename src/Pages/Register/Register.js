@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Catagories = () => {
+const Register = () => {
     return (
         <div>
 
@@ -8,4 +8,4 @@ const Catagories = () => {
     );
 };
 
-export default Catagories;
+export default Register;
