@@ -53,7 +53,7 @@ const Categories = () => {
 
 
     return (
-        <div className='grid mt-8 gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10'>
+        <div className='grid mt-8 gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-5'>
             {
                 cardData.map(card => <Category
                     key={card.id}
