@@ -29,7 +29,7 @@ const Home = () => {
                                 Pick your best ukulele
 
                                 <br className="hidden md:block" />
-                                to pick or resale in{' '}
+                                to pick or sell in{' '}
                                 <span className="inline-block text-primary">
                                     Find Uke
                                 </span>
@@ -59,27 +59,26 @@ const Home = () => {
 
             </section>
 
-            <section>
+            <section className='bg-Neutral-50'>
 
-                <div>
-                    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
-                        <div className="flex flex-col items-start max-w-screen-sm md:flex-row sm:mx-auto">
-                            <Link to="/" className="mb-4 mr-8">
+                <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
+                    <div className="flex flex-col items-start max-w-screen-sm md:flex-row sm:mx-auto">
+                        <Link to="/" className="mb-4 mr-8">
 
-                            </Link>
-                            <div>
+                        </Link>
+                        <div>
 
-                                <h2 className="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                                    Choose the Ukelele Category
-                                </h2>
-                                <p className="text-base text-gray-700 md:text-lg">
-                                    You can choose the Ukulele category and click on the card to see availability and the full description of that product!
-                                </p>
-                            </div>
+                            <h2 className="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+                                Choose the Ukelele Category
+                            </h2>
+                            <p className="text-base text-gray-700 md:text-lg">
+                                You can choose the Ukulele category and click on the card to see availability and the full description of that product!
+                            </p>
                         </div>
                     </div>
-                    <Categories></Categories>
                 </div>
+                <Categories></Categories>
+
             </section>
 
             <section className='pb-10  md:pb-15 lg:pb-20'>
