@@ -1,14 +1,3 @@
-// import React from 'react';
-
-// const Register = () => {
-//     return (
-//         <div>
-
-//         </div>
-//     );
-// };
-
-// export default Register;
 
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -20,6 +9,8 @@ const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { createUser, updateUser } = useContext(AuthContext);
     const [signUpError, setSignUPError] = useState('')
+
+
     const handleSignUp = (data) => {
         console.log(data);
         setSignUPError('');
@@ -42,7 +33,7 @@ const Register = () => {
     }
 
     return (
-        <div className='h-[800px] flex justify-center items-center'>
+        <div className='h-[600px] flex justify-center items-center'>
             <div className='w-96 p-4 bg-lime-50'>
                 <h2 className='text-xl text-center'>Sign Up</h2>
                 <form onSubmit={handleSubmit(handleSignUp)}>
@@ -69,10 +60,10 @@ const Register = () => {
                         })} className="input input-bordered w-full max-w-xs" />
                         {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
                     </div>
-                    <input className='btn btn-accent w-full mt-4' value="Sign Up" type="submit" />
+                    <input className='btn btn-accent w-full mt-5' value="Register" type="submit" />
                     {signUpError && <p className='text-red-600'>{signUpError}</p>}
                 </form>
-                <p>Already have an account <Link className='text-secondary' to="/login">Please Login</Link></p>
+                <p className='pt-4'>Already have a <strong>Find Uke</strong> account?  <Link className='text-secondary' to="/login">Please Login</Link></p>
                 <div className="divider">OR</div>
                 <button className='btn btn-outline w-full'>CONTINUE WITH GOOGLE</button>
 

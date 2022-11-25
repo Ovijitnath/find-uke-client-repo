@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../../src/findUke.png'
+import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
+
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(err => console.log(err));
+    }
+
+
     return (
         <div>
             <nav className="shadow">
@@ -23,22 +34,20 @@ const Navbar = () => {
                                     <Link className="text-gray-500  hover:text-indigo-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/contact">
                                         Contact
                                     </Link>
-                                    {/* {
-                                        user?.email ? */}
-                                    {/* <>
-                                                <Link className="text-gray-500  hover:text-indigo-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/review">
-                                                    Review
+                                    {
+                                        user?.email ?
+                                            <>
+                                                <Link className="text-gray-500  hover:text-indigo-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/myorders">
+                                                    My Orders
                                                 </Link>
-                                                <Link className="text-gray-500  hover:text-indigo-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/addservice">
-                                                    Add Service
-                                                </Link>
-                                                <button  className='btn-ghost'>Sign Out</button>
-                                            </> */}
-                                    {/* : */}
-                                    <Link className="text-gray-500  hover:text-indigo-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/login">
-                                        Login
-                                    </Link>
-                                    {/* } */}
+
+                                                <button onClick={handleLogOut} className='btn-ghost'>Log Out</button>
+                                            </>
+                                            :
+                                            <Link className="text-gray-500  hover:text-indigo-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/login">
+                                                Login
+                                            </Link>
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -70,22 +79,20 @@ const Navbar = () => {
                         <Link className="text-gray-500 hover:text-indigo-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" to="/contact">
                             Contact
                         </Link>
-                        {/* {
-                            user?.email ? */}
-                        <>
-                            {/* <Link className="text-gray-500  hover:text-indigo-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/review">
-                                        Review
+                        {
+                            user?.email ?
+                                <>
+                                    <Link className="text-gray-500  hover:text-indigo-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/myorders">
+                                        My Orders
                                     </Link>
-                                    <Link className="text-gray-500  hover:text-indigo-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/addservice">
-                                        Add Service
-                                    </Link>
-                                    <button onClick={handleLogOut} className='btn-ghost'>Sign Out</button> */}
-                        </>
-                        {/* : */}
-                        <Link className="text-gray-500  hover:text-indigo-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/login">
-                            Login
-                        </Link>
-                        {/* } */}
+
+                                    <button onClick={handleLogOut} className='btn-ghost'>Log Out</button>
+                                </>
+                                :
+                                <Link className="text-gray-500  hover:text-indigo-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/login">
+                                    Login
+                                </Link>
+                        }
                     </div>
                 </div>
             </nav>

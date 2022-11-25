@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import Dashboard from "../Dashboard/Dashboard/Dashboard";
 import Main from "../Layout/Main";
 import Blog from "../Pages/Blog/Blog";
 import Categories from "../Pages/Categories/Categories";
@@ -7,6 +8,7 @@ import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
+import PrivateRoute from "./PrivateRoutes";
 
 
 
@@ -44,6 +46,10 @@ export const router = createBrowserRouter([
                 element: <Register></Register>
             }
         ]
+    },
+    {
+        path: '/myorders',
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
     },
     {
         path: '*',
