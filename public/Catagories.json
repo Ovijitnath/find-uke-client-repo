@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Soprano",
+        "image": "https://www.dealsmagnet.com/images/15kGx92f/2020/November/07/large/renewed-juarez-jrz21uk-21-soprano-ukulele-kit-aqui.jpg",
+        "description": "The most common and standard type of ukulele is the soprano ukulele. It is the smallest ukulele and is known for its thin, jangly sound so commonly associated with ukuleles."
+    },
+    {
+        "id": 2,
+        "name": "Concert",
+        "image": "https://www.dealsmagnet.com/images/157rRf5A/2020/September/09/large/juarez-estrella-23-concert-ukulele.jpg",
+        "description": "The concert ukulele, sometimes referred to as the alto, is just a little bit bigger than the soprano and some would consider it to have a fuller sound. "
+    },
+    {
+        "id": 3,
+        "name": "Tenor",
+        "image": "https://www.ortola-sa.es/web/image/product.template/19752/image_256/%5B9010%5D%20Pack%20Soprano%20Ukelele%20%2B%20Bag%20%2B%20Tuner?unique=0aa35d0",
+        "description": "The tenor ukulele is just a little bit bigger than the concert uke. The overall sound and tone is even fuller than its smaller brothers."
+    }
+]

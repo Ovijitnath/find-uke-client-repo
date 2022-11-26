@@ -25,9 +25,9 @@ const Navbar = () => {
                                     <Link className="text-gray-500  hover:text-indigo-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/home">
                                         Home
                                     </Link>
-                                    <Link className="text-gray-800  hover:text-indigo-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/categories">
+                                    {/* <Link className="text-gray-800  hover:text-indigo-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/categories">
                                         Categories
-                                    </Link>
+                                    </Link> */}
                                     <Link className="text-gray-500  hover:text-indigo-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/blog">
                                         Blog
                                     </Link>
@@ -70,9 +70,9 @@ const Navbar = () => {
                         <Link className="text-gray-500 hover:text-indigo-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" to="/home">
                             Home
                         </Link>
-                        <Link className="text-gray-800 dark:text-white block px-3 py-2 rounded-md text-base font-medium" to="/categories">
+                        {/* <Link className="text-gray-800 dark:text-white block px-3 py-2 rounded-md text-base font-medium" to="/categories">
                             Categories
-                        </Link>
+                        </Link> */}
                         <Link className="text-gray-500 hover:text-indigo-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" to="/blog">
                             Blog
                         </Link>
