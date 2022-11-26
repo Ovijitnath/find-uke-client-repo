@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Category = ({ card }) => {
-    const { name, description, image, location } = card;
+    const { name, description, image } = card;
     return (
 
-        <div className="card card-compact w-96  shadow-xl bg-base-100">
+        <div className="card  bg-base-100 shadow-xl">
             <figure><img src={image} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{name}</h2>

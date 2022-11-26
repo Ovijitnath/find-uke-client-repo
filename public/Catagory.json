@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "Category_id": 1,
         "name": "Soprano",
         "image": "https://www.dealsmagnet.com/images/15kGx92f/2020/November/07/large/renewed-juarez-jrz21uk-21-soprano-ukulele-kit-aqui.jpg",
         "location": "Dhaka",
@@ -9,10 +10,24 @@
         "yearOfUse": "2",
         " postedTime": "2am ,23rd Jan, 2022",
         "sellerName": "Charlie Puth",
-        "description": "The most common and standard type of ukulele is the soprano ukulele. It is the smallest ukulele and is known for its thin, jangly sound so commonly associated with ukuleles. Because it is so small, it is perfect for traveling.Sometimes people with larger fingers or hands have trouble playing the soprano ukulele because the frets are closer together. Because the strings have less tension on a soprano uke, you might find it easy to accidentally bend a string out of tune. Despite these relatively minor downsides, the soprano ukulele is probably the best bang for the buck. In comparison to other types of ukuleles, it can usually be had for the cheapest price."
+        "description": "The most common and standard type of ukulele is the soprano ukulele. It is the smallest ukulele and is known for its thin, jangly sound so commonly associated with ukuleles. Because it is so small, it is perfect for traveling.Sometimes people with larger fingers or hands have trouble playing the soprano ukulele because the frets are closer together. "
     },
     {
         "id": 2,
+        "Category_id": 1,
+        "name": "Soprano",
+        "image": "https://musicalguima.com/260316-home_default/ukelele-ma-kai-natural.jpg",
+        "location": "Dhaka",
+        "resalePrice": "2000",
+        "originalPrice": "4000",
+        "yearOfUse": "2",
+        " postedTime": "2am ,23rd Jan, 2022",
+        "sellerName": "Charlie Puth",
+        "description": "The most common and standard type of ukulele is the soprano ukulele. It is the smallest ukulele and is known for its thin, jangly sound so commonly associated with ukuleles. Because it is so small, it is perfect for traveling.Sometimes people with larger fingers or hands have trouble playing the soprano ukulele because the frets are closer together."
+    },
+    {
+        "id": 3,
+        "Category_id": 2,
         "name": "Concert",
         "image": "https://www.dealsmagnet.com/images/157rRf5A/2020/September/09/large/juarez-estrella-23-concert-ukulele.jpg",
         "location": "Chittagong",
@@ -21,10 +36,24 @@
         "yearOfUse": "1.5",
         "postedTime": "10am ,2nd June, 2022",
         "sellerName": "Justin Biber",
-        "description": "The concert ukulele, sometimes referred to as the alto, is just a little bit bigger than the soprano and some would consider it to have a fuller sound. It’s commonly tuned in standard tuning like the soprano uke although some people will opt to tune their g-string down an octave to low G tuning, also known as linear tuning. Because a concert uke is longer than a soprano, there will be more tension on the strings. This can be beneficial if you find yourself bending strings out of tune as you press your fingers down on the strings against the frets. Additionally, the frets are slightly more spaced on a concert ukulele versus a soprano, so folks with larger fingers might find it easier to play. There can be up to 20 frets on a concert ukulele, which allows players to navigate to higher notes on the fretboard which is beneficial for playing in styles like fingerstyle."
+        "description": "The concert ukulele, sometimes referred to as the alto, is just a little bit bigger than the soprano and some would consider it to have a fuller sound. It’s commonly tuned in standard tuning like the soprano uke although some people will opt to tune their g-string down an octave to low G tuning, also known as linear tuning."
     },
     {
-        "id": 3,
+        "id": 4,
+        "Category_id": 2,
+        "name": "Concert",
+        "image": "https://musicalguima.com/208204-home_default/uke-soprano-elec-kala-kase.jpg",
+        "location": "Chittagong",
+        "resalePrice": "1990",
+        "originalPrice": "5000",
+        "yearOfUse": "1.5",
+        "postedTime": "10am ,2nd June, 2022",
+        "sellerName": "Justin Biber",
+        "description": "The concert ukulele, sometimes referred to as the alto, is just a little bit bigger than the soprano and some would consider it to have a fuller sound. It’s commonly tuned in standard tuning like the soprano uke although some people will opt to tune their g-string down an octave to low G tuning, also known as linear tuning."
+    },
+    {
+        "id": 5,
+        "Category_id": 3,
         "name": "Tenor",
         "image": "https://www.ortola-sa.es/web/image/product.template/19752/image_256/%5B9010%5D%20Pack%20Soprano%20Ukelele%20%2B%20Bag%20%2B%20Tuner?unique=0aa35d0",
         "location": "Coxs Bazar",
@@ -33,6 +62,19 @@
         "yearOfUse": "2",
         "postedTime": "2am ,23rd Jan, 2022",
         "sellerName": "Prateek Kuhad",
-        "description": "The tenor ukulele is just a little bit bigger than the concert uke. The overall sound and tone is even fuller than its smaller brothers. For performers, the tenor ukulele is ideal because you get a rich full sound, and since you have more frets, you’re able to reach higher notes on the fretboard.Tenor ukuleles are commonly tuned in standard re-entrant or linear tuning, but some will choose to tune it lower like a baritone ukulele to D-G-B-E."
+        "description": "The tenor ukulele is just a little bit bigger than the concert uke. The overall sound and tone is even fuller than its smaller brothers. For performers, the tenor ukulele is ideal because you get a rich full sound, and since you have more frets, you’re able to reach higher notes on the fretboard."
+    },
+    {
+        "id": 6,
+        "Category_id": 3,
+        "name": "Tenor",
+        "image": "https://i.pinimg.com/originals/50/2f/0e/502f0e7bb115c33ed47df6f5fa54fe82.jpg",
+        "location": "Coxs Bazar",
+        "resalePrice": "2000",
+        "originalPrice": "4000",
+        "yearOfUse": "2",
+        "postedTime": "2am ,23rd Jan, 2022",
+        "sellerName": "Prateek Kuhad",
+        "description": "The tenor ukulele is just a little bit bigger than the concert uke. The overall sound and tone is even fuller than its smaller brothers. For performers, the tenor ukulele is ideal because you get a rich full sound, and since you have more frets, you’re able to reach higher notes on the fretboard."
     }
 ]
