@@ -3,7 +3,7 @@ import Dashboard from "../Dashboard/Dashboard/Dashboard";
 import Main from "../Layout/Main";
 import Blog from "../Pages/Blog/Blog";
 import CatagoriesDetail from "../Pages/CatagoriesDetail/CatagoriesDetail";
-import Categories from "../Pages/Categories/Categories";
+// import Categories from "../Pages/Categories/Categories";
 import Contact from "../Pages/Contact/Contact";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
@@ -28,9 +28,9 @@ export const router = createBrowserRouter([
             },
             {
 
-                path: '/category/:id',
+                path: '/Categories/:id',
                 element: <CatagoriesDetail></CatagoriesDetail>,
-                // loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/ategories/${params.id}`)
             },
             {
                 path: '/blog',
