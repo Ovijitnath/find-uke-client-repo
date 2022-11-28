@@ -22,6 +22,7 @@ const CatagoriesDetail = () => {
 
     return (
         <div>
+
             <div className='grid mt-8 gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-5'>
                 {
                     products.map(card => <SingleCatagoryDetails

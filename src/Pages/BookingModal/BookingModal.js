@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
+import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+
 
 const BookingModal = ({ modproducts, setModProducts }) => {
 
 
     const { name, resalePrice } = modproducts;
-    console.log(modproducts)
+    const { user } = useContext(AuthContext);
 
     const handleBuy = event => {
         event.preventDefault();
@@ -24,9 +27,28 @@ const BookingModal = ({ modproducts, setModProducts }) => {
 
 
         }
-
-        console.log(booking)
-        setModProducts(null);
+        // toast('Booked Successfully!')
+        // console.log(booking)
+        // setModProducts(null);
+        fetch('http://localhost:5000/bookings', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(booking)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.acknowledged) {
+                    setModProducts(null);
+                    toast.success('Booking confirmed');
+                    // refetch();
+                }
+                else {
+                    toast.error(data.message);
+                }
+            })
     }
 
     return (
@@ -37,12 +59,12 @@ const BookingModal = ({ modproducts, setModProducts }) => {
                     <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 className="text-lg font-bold mb-5">{name}</h3>
                     <form onSubmit={handleBuy}>
-                        <input name="name" type="text" placeholder="Your Name" className="input mb-2 w-full input-bordered" required />
-                        <input name="email" type="email" placeholder="Email Address" className="input mb-2 w-full input-bordered" required />
+                        <input name="name" defaultValue={user?.displayName} disabled type="text" placeholder="Your Name" className="input mb-2 w-full input-bordered" required />
+                        <input name="email" defaultValue={user?.email} disabled type="email" placeholder="Email Address" className="input mb-2 w-full input-bordered" required />
                         <input name="productName" defaultValue={name} disabled type="text" placeholder="Item-name" className="input mb-2 w-full input-bordered" />
                         <input name="price" defaultValue={resalePrice} disabled type="text" placeholder="Price" className="input mb-2 w-full input-bordered" />
                         <input name="phone" type="text" placeholder="Phone Number" className="input mb-2 w-full input-bordered" required />
-                        <input name="location" type="text" placeholder="Location" className="input mb-2 w-full input-bordered" required />
+                        <input name="location" type="text" placeholder="Meeting Location" className="input mb-2 w-full input-bordered" required />
                         <br />
                         <input className='btn btn-accent w-full' type="submit" value="Submit" />
                     </form>
