@@ -9,21 +9,20 @@ const MyOrders = () => {
 
     const { data: bookings = [] } = useQuery({
         queryKey: ['bookings', user?.email],
-        queryFn: async () =>
-        // {
-        //     const res = await fetch(url, {
-        //         headers: {
-        //             authorization: `bearer ${localStorage.getItem('accessToken')}`
-        //         }
-        //     });
-        //     const data = await res.json();
-        //     return data;
-        // }
-        {
-            const res = await fetch(url);
+        queryFn: async () => {
+            const res = await fetch(url, {
+                headers: {
+                    authorization: `bearer ${localStorage.getItem('accessToken')}`
+                }
+            });
             const data = await res.json();
             return data;
         }
+        // {
+        //     const res = await fetch(url);
+        //     const data = await res.json();
+        //     return data;
+        // }
 
     })
     return (
@@ -35,11 +34,6 @@ const MyOrders = () => {
                         <tr>
                             <th></th>
                             <th>Image
-                                {/* <div className="avatar">
-                                    <div className="w-24 rounded-full">
-                                        <img src="https://placeimg.com/192/192/people" />
-                                    </div>
-                                </div> */}
                             </th>
                             <th>Name</th>
                             <th>Title</th>
