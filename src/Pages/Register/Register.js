@@ -8,7 +8,9 @@ import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { createUser, updateUser } = useContext(AuthContext);
-    const [signUpError, setSignUPError] = useState('')
+    const [signUpError, setSignUPError] = useState('');
+    // const [createdUserEmail, setCreatedUserEmail] = useState('')
+
     const navigate = useNavigate();
 
     const handleSignUp = (data) => {
@@ -24,7 +26,7 @@ const Register = () => {
                 }
                 updateUser(userInfo)
                     .then(() => {
-                        navigate('/');
+                        saveUser(data.name, data.email);
                     })
                     .catch(err => console.log(err));
             })
@@ -32,6 +34,23 @@ const Register = () => {
                 console.log(error)
                 setSignUPError(error.message)
             });
+    }
+
+    const saveUser = (name, email) => {
+        const user = { name, email };
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.group(data);
+                // setCreatedUserEmail(email);
+                navigate('/');
+            })
     }
 
     return (
