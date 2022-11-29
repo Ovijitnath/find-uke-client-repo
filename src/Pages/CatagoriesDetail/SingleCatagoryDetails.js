@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const SingleCatagoryDetails = ({ card, setModProducts }) => {
     const { name, description, image, resalePrice, location, originalPrice, yearOfUse,
@@ -22,11 +22,11 @@ const SingleCatagoryDetails = ({ card, setModProducts }) => {
                     <h5>Year of use : {yearOfUse} years</h5>
                     <h5>Seller Name : {sellerName}</h5>
                     <br />
-                    <h5>posted Time : {postedTime} pm</h5>
+                    <h5>posted Time : {postedTime}</h5>
                     {/* </div> */}
 
                     <label htmlFor="booking-modal"
-                        className="btn btn-primary"
+                        className="btn btn-success"
                         onClick={() => setModProducts(card)}
                     >Book this item</label>
                 </div>

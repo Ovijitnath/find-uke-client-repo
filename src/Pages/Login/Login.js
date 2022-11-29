@@ -44,9 +44,9 @@ const Login = () => {
     }
 
     return (
-        <div className='h-[600px] flex justify-center items-center'>
-            <div className='w-96 p-5 bg-amber-50'>
-                <h2 className='text-xl text-center'>Login</h2>
+        <div className='flex justify-center items-center'>
+            <div className='w-96 p-5 bg-amber-50 border my-5'>
+                <h2 className='text-2xl text-center font-bold'>Login</h2>
                 <form onSubmit={handleSubmit(handleLogin)}>
                     <div className="form-control w-full max-w-xs">
                         <label className="label"> <span className="label-text">Email</span></label>
@@ -65,7 +65,7 @@ const Login = () => {
                                 minLength: { value: 6, message: 'Password must be 6 characters or longer' }
                             })}
                             className="input input-bordered w-full max-w-xs" />
-                        <label className="label"> <span className="label-text">Forget Password?</span></label>
+                        {/* <label className="label"> <span className="label-text">Forget Password?</span></label> */}
                         {errors.password && <p className='text-red-600'>{errors.password?.message}</p>}
                     </div>
                     <input className='btn btn-accent w-full mt-5' value="Login" type="submit" />

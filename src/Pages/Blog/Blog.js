@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../Blog_niche_Brain_2.gif'
 const Item = ({ title, children }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -47,9 +48,9 @@ export const Blog = () => {
             <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
                 <img className='mx-auto' src={logo} style={{ width: 150, height: 120 }} alt="" />
                 <div className="flex flex-col mb-16 sm:text-center">
-                    <a href="/blog" className="mb-6 sm:mx-auto">
+                    <Link to="/blog" className="mb-6 sm:mx-auto">
 
-                    </a>
+                    </Link>
                     <div className="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl">
                         <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
                             <span className="relative inline-block">

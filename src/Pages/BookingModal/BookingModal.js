@@ -21,6 +21,7 @@ const BookingModal = ({ modproducts, setModProducts }) => {
         const booking = {
             sellerName: name,
             email: email,
+            name: name,
             productName: productName,
             phoneNo: phone,
             location: location,

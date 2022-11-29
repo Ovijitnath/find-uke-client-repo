@@ -2,14 +2,14 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { createUser, updateUser } = useContext(AuthContext);
     const [signUpError, setSignUPError] = useState('')
-
+    const navigate = useNavigate();
 
     const handleSignUp = (data) => {
         console.log(data);
@@ -23,7 +23,9 @@ const Register = () => {
                     displayName: data.name
                 }
                 updateUser(userInfo)
-                    .then(() => { })
+                    .then(() => {
+                        navigate('/');
+                    })
                     .catch(err => console.log(err));
             })
             .catch(error => {
@@ -33,10 +35,34 @@ const Register = () => {
     }
 
     return (
-        <div className='h-[600px] flex justify-center items-center'>
-            <div className='w-96 p-4 bg-lime-50'>
-                <h2 className='text-xl text-center'>Sign Up</h2>
+        <div className='flex justify-center items-center'>
+            <div className='w-96 p-4 bg-lime-50 border my-5'>
+                <h2 className='text-2xl text-center font-bold'>Sign Up</h2>
                 <form onSubmit={handleSubmit(handleSignUp)}>
+                    <div className='pt-5'>
+                        <p className='text-xl'>I would like to Be:</p>
+                        <label htmlFor="field-rain">
+                            <input
+                                {...register("rain")}
+                                type="radio"
+                                name="weather"
+                                value="rain"
+                                id="field-rain"
+                            />
+                            Buyer
+                        </label>
+
+                        <label htmlFor="field-wind">
+                            <input
+                                {...register("wind")}
+                                type="radio"
+                                name="weather"
+                                value="wind"
+                                id="field-wind"
+                            />
+                            Seller
+                        </label>
+                    </div>
                     <div className="form-control w-full max-w-xs">
                         <label className="label"> <span className="label-text">Name</span></label>
                         <input type="text" {...register("name", {
@@ -44,13 +70,8 @@ const Register = () => {
                         })} className="input input-bordered w-full max-w-xs" />
                         {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
                     </div>
-                    {/* <div className="form-control w-full max-w-xs">
-                        <label className="label"> <span className="label-text">Name</span></label>
-                        <input type="text" {...register("name", {
-                            required: "Name is Required"
-                        })} className="input input-bordered w-full max-w-xs" />
-                        {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
-                    </div> */}
+
+
                     <div className="form-control w-full max-w-xs">
                         <label className="label"> <span className="label-text">Email</span></label>
                         <input type="email" {...register("email", {
