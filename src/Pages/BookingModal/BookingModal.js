@@ -17,7 +17,7 @@ const BookingModal = ({ modproducts, setModProducts }) => {
         const productName = form.productName.value;
         const phone = form.phone.value;
         const location = form.location.value;
-
+        // const resalePrice = form.resalePrice.value;
         const booking = {
             sellerName: name,
             email: email,
@@ -25,6 +25,8 @@ const BookingModal = ({ modproducts, setModProducts }) => {
             productName: productName,
             phoneNo: phone,
             location: location,
+            // resalePrice: resalePrice
+            // insertedId:insertedId
 
 
         }
