@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const MyOrders = () => {
@@ -33,13 +34,16 @@ const MyOrders = () => {
                             <th>Name</th>
                             <th>Title</th>
                             <th>Price</th>
+                            <th>Payment</th>
 
 
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            bookings.map((booking, i) => <tr key={booking._id}>
+                            bookings &&
+
+                            bookings?.map((booking, i) => <tr key={booking._id}>
                                 <th>{i + 1}</th>
                                 <td>
                                     <div className="avatar">
@@ -51,7 +55,21 @@ const MyOrders = () => {
                                 <td>{booking.name}</td>
                                 <td>{booking.productName}</td>
                                 <td>{booking.price}</td>
-                                <th><button className='btn btn-warning btn-xs px-2'>Pay</button></th>
+                                {/* <th><button className='btn btn-warning btn-xs px-2'>Pay</button></th> */}
+                                <th>
+                                    {
+                                        booking.price && !booking.paid && <Link
+                                            to={`/dashboard/payment/${booking._id}`}
+                                        >
+                                            <button
+                                                className='btn btn-warning btn-xs px-2'
+                                            >Pay</button>
+                                        </Link>
+                                    }
+                                    {
+                                        booking.price && booking.paid && <span className='text-green-500'>Paid</span>
+                                    }
+                                </th>
                             </tr>)
                         }
                     </tbody>

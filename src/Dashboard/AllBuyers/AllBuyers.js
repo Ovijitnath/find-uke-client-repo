@@ -1,10 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
+import { data } from 'autoprefixer';
 import React from 'react';
 import toast from 'react-hot-toast';
+import Loading from '../../Pages/Shared/Loading/Loading';
 
 const AllBuyers = () => {
 
-    const { data: buyers = [], refetch } = useQuery({
+    const { data: buyers = [], isLoading, refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
             const res = await fetch('http://localhost:5000/users');
@@ -27,9 +29,33 @@ const AllBuyers = () => {
                     refetch();
                 }
             })
-        // .then(data => {
-        //     console.log(data)
-        // })
+    }
+
+    // const handleDeleteBuyer = buyerDlt => {
+    //     fetch(`http://localhost:5000/users/admin/${buyerDlt.id}`, {
+    //         method: 'DELETE',
+    //         headers: {
+    //             authorization: `bearer ${localStorage.getItem('accessToken')}`
+    //         }
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             if (data.deleteCount > 0) {
+    //                 console.log(data);
+    //                 refetch();
+    //                 toast.success(`Buyer ${buyerDlt.name} deleted successfully`)
+    //             }
+
+
+
+    //         })
+    // }
+
+
+
+
+    if (isLoading) {
+        return <Loading></Loading>
     }
 
     return (
@@ -53,7 +79,8 @@ const AllBuyers = () => {
                                 <td>{buyer.name}</td>
                                 <td>{buyer.email}</td>
                                 <td>{buyer?.role !== 'admin' && <button onClick={() => handleMakeAdmin(buyer._id)} className='btn btn-xs btn-primary'>Make Admin</button>}</td>
-                                {/* <td><button onClick={() => handleMakeAdmin(buyer._id)} className='btn btn-xs btn-primary'>Make Admin</button></td> */}
+
+                                {/* <td><button onClick={() => handleDeleteBuyer(buyer._id)} className='btn btn-xs btn-outline btn-secondary'>Delete</button></td> */}
                                 <td><button className='btn btn-xs btn-outline btn-secondary'>Delete</button></td>
                             </tr>)
                         }
@@ -64,5 +91,6 @@ const AllBuyers = () => {
         </div>
     );
 };
+
 
 export default AllBuyers;
