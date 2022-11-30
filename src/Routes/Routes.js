@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import AllBuyers from "../Dashboard/AllBuyers/AllBuyers";
-import Dashboard from "../Dashboard/Dashboard/Dashboard";
+// import Dashboard from "../Dashboard/Dashboard/Dashboard";
 import MyOrders from "../Dashboard/MyOrders/MyOrders";
 import Payment from "../Dashboard/Payment/Payment";
 import DashBoardLayout from "../Layout/DashBoardLayout";
@@ -70,15 +70,6 @@ export const router = createBrowserRouter([
                 path: '/dashboard/allbuyers',
                 element: <AdminRoute><AllBuyers></AllBuyers></AdminRoute>
             },
-
-            // {
-
-            //     path: '/dashboard/payment/:id',
-            //     element: <AdminRoute><Payment></Payment></AdminRoute>
-            //     // loader: ({ params }) => fetch(`http://localhost:5000/catagory/${params.id}`)
-            // }
-            // },
-
             {
 
                 path: '/dashboard/payment/:id',

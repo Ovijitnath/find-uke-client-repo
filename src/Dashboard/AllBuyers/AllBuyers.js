@@ -1,5 +1,4 @@
 import { useQuery } from '@tanstack/react-query';
-import { data } from 'autoprefixer';
 import React from 'react';
 import toast from 'react-hot-toast';
 import Loading from '../../Pages/Shared/Loading/Loading';
