@@ -55,7 +55,6 @@ const MyOrders = () => {
                                 <td>{booking.name}</td>
                                 <td>{booking.productName}</td>
                                 <td>{booking.price}</td>
-                                {/* <th><button className='btn btn-warning btn-xs px-2'>Pay</button></th> */}
                                 <th>
                                     {
                                         booking.price && !booking.paid && <Link

@@ -37,7 +37,7 @@ const AddProduct = () => {
                     console.log(product)
 
 
-                    fetch('http://localhost:5000/products', {
+                    fetch('http://localhost:5000/catagory', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
@@ -146,7 +146,7 @@ const AddProduct = () => {
                     </div>
 
                     <input className='btn btn-accent  mt-4' value="Submit" type="submit" />
-                    {/* {signUpError && <p className='text-red-600'>{signUpError}</p>} */}
+
                 </form>
             </div>
         </div>

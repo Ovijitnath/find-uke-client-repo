@@ -30,29 +30,6 @@ const AllBuyers = () => {
             })
     }
 
-    // const handleDeleteBuyer = buyerDlt => {
-    //     fetch(`http://localhost:5000/users/admin/${buyerDlt.id}`, {
-    //         method: 'DELETE',
-    //         headers: {
-    //             authorization: `bearer ${localStorage.getItem('accessToken')}`
-    //         }
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             if (data.deleteCount > 0) {
-    //                 console.log(data);
-    //                 refetch();
-    //                 toast.success(`Buyer ${buyerDlt.name} deleted successfully`)
-    //             }
-
-
-
-    //         })
-    // }
-
-
-
-
     if (isLoading) {
         return <Loading></Loading>
     }
@@ -79,7 +56,7 @@ const AllBuyers = () => {
                                 <td>{buyer.email}</td>
                                 <td>{buyer?.role !== 'admin' && <button onClick={() => handleMakeAdmin(buyer._id)} className='btn btn-xs btn-primary'>Make Admin</button>}</td>
 
-                                {/* <td><button onClick={() => handleDeleteBuyer(buyer._id)} className='btn btn-xs btn-outline btn-secondary'>Delete</button></td> */}
+
                                 <td><button className='btn btn-xs btn-outline btn-secondary'>Delete</button></td>
                             </tr>)
                         }
