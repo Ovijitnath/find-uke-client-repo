@@ -18,7 +18,7 @@ const Home = () => {
                     <div className="grid gap-10 lg:grid-cols-2">
                         <div className="lg:pr-10">
                             <Link
-                                href="/"
+                                to="/"
                                 aria-label="Go Home"
                                 title="Logo"
                                 className="inline-block mb-5"

@@ -48,7 +48,7 @@ const Footer = () => {
                         <div className="flex">
                             <p className="mr-1 text-gray-800">Email:</p>
                             <Link
-                                to="mailto:info@lorem.mail"
+                                to=""
                                 aria-label="Our email"
                                 title="Our email"
                                 className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"

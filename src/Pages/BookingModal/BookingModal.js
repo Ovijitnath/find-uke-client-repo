@@ -30,7 +30,7 @@ const BookingModal = ({ modproducts, setModProducts }) => {
 
         }
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://find-uke-server.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

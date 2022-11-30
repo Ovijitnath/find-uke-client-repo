@@ -1,7 +1,3 @@
-// import React, { useContext } from 'react';
-// import { useNavigate, useRouteError } from 'react-router-dom';
-// import { AuthContext } from '../../../contexts/AuthProvider';
-
 import { useContext } from "react";
 import { useNavigate, useRouteError } from "react-router-dom";
 import { AuthContext } from "../../../Context/AuthProvider/AuthProvider";

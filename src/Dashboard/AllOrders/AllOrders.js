@@ -5,7 +5,7 @@ const AllOrders = () => {
     const [bookings, setBookings] = useState([]);
     useEffect(() => {
 
-        fetch('http://localhost:5000/bookings')
+        fetch('https://find-uke-server.vercel.app/bookings')
             .then(res => res.json())
             .then(data => setBookings(data))
 
@@ -50,8 +50,6 @@ const AllOrders = () => {
                                 <td>{booking.name}</td>
                                 <td>{booking.productName}</td>
                                 <td>{booking.price}</td>
-                                {/* <th><button className='btn btn-warning btn-xs px-2'>Pay</button></th> */}
-
                             </tr>)
                         }
                     </tbody>

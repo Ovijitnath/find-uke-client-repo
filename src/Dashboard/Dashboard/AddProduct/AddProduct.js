@@ -37,7 +37,7 @@ const AddProduct = () => {
                     console.log(product)
 
 
-                    fetch('http://localhost:5000/catagory', {
+                    fetch('https://find-uke-server.vercel.app/catagory', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
