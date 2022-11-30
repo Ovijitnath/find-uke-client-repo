@@ -19,6 +19,7 @@ const Login = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
+
     const from = location.state?.from?.pathname || '/';
 
     if (token) {
@@ -40,6 +41,8 @@ const Login = () => {
                 setLoginError(error.message);
             });
     }
+
+
     const googleProvider = new GoogleAuthProvider();
 
     const handleGoogleSignIn = () => {
@@ -50,6 +53,8 @@ const Login = () => {
             })
             .catch(error => console.error(error))
     }
+
+
 
     return (
         <div className='flex justify-center items-center'>

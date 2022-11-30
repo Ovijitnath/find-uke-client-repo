@@ -6,7 +6,7 @@ import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 const BookingModal = ({ modproducts, setModProducts }) => {
 
 
-    const { name, resalePrice } = modproducts;
+    const { name, resalePrice, image } = modproducts;
     const { user } = useContext(AuthContext);
 
     const handleBuy = event => {
@@ -17,7 +17,7 @@ const BookingModal = ({ modproducts, setModProducts }) => {
         const productName = form.productName.value;
         const phone = form.phone.value;
         const location = form.location.value;
-        // const resalePrice = form.resalePrice.value;
+        const price = form.price.value;
         const booking = {
             sellerName: name,
             email: email,
@@ -25,14 +25,11 @@ const BookingModal = ({ modproducts, setModProducts }) => {
             productName: productName,
             phoneNo: phone,
             location: location,
-            // resalePrice: resalePrice
-            // insertedId:insertedId
-
+            price: price,
+            image: image
 
         }
-        // toast('Booked Successfully!')
-        // console.log(booking)
-        // setModProducts(null);
+
         fetch('http://localhost:5000/bookings', {
             method: 'POST',
             headers: {
@@ -46,7 +43,6 @@ const BookingModal = ({ modproducts, setModProducts }) => {
                 if (data.acknowledged) {
                     setModProducts(null);
                     toast.success('Booking confirmed');
-                    // refetch();
                 }
                 else {
                     toast.error(data.message);

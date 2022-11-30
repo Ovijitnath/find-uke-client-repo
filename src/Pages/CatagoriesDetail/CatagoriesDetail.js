@@ -6,15 +6,6 @@ import SingleCatagoryDetails from './SingleCatagoryDetails';
 
 const CatagoriesDetail = () => {
 
-    // const { data: products = [] } = useQuery({
-    //     queryKey: ['products'],
-    //     queryFn: async () => {
-    //         const res = await fetch('http://localhost:5000/products');
-    //         const data = await res.json();
-    //         return data
-    //     }
-    // });
-
     const products = useLoaderData();
     const [modproducts, setModProducts] = useState(null);
 

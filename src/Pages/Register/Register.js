@@ -54,8 +54,6 @@ const Register = () => {
             .then(res => res.json())
             .then(data => {
                 console.group(data);
-                // setCreatedUserEmail(email);
-                // navigate('/');
                 setCreatedUserEmail(email)
             })
     }
@@ -132,3 +130,8 @@ const Register = () => {
 };
 
 export default Register;
+
+
+
+
+

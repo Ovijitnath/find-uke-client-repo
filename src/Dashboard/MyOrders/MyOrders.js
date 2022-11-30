@@ -18,11 +18,6 @@ const MyOrders = () => {
             const data = await res.json();
             return data;
         }
-        // {
-        //     const res = await fetch(url);
-        //     const data = await res.json();
-        //     return data;
-        // }
 
     })
     return (
@@ -46,10 +41,16 @@ const MyOrders = () => {
                         {
                             bookings.map((booking, i) => <tr key={booking._id}>
                                 <th>{i + 1}</th>
-                                <td>{booking.img}</td>
+                                <td>
+                                    <div className="avatar">
+                                        <div className="w-32 rounded">
+                                            <img src={booking.image} alt='' />
+                                        </div>
+                                    </div>
+                                </td>
                                 <td>{booking.name}</td>
                                 <td>{booking.productName}</td>
-                                <td>{booking.resalePrice}</td>
+                                <td>{booking.price}</td>
                                 <th><button className='btn btn-warning btn-xs px-2'>Pay</button></th>
                             </tr>)
                         }
