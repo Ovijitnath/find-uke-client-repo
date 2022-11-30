@@ -1,3 +1,46 @@
+Website Name - find Uke
+
+Live Website Link- https://find-uke.web.app
+
+Admin Email- admin@gmail.com || you@gmail.com || me@gmail.com
+Admin Password- 1234A@
+
+
+
+
+Its it created with mainly:- 1.React JS. 2. Tailwind Css. 3.Daisy Ui 4.Firebase 5.Vercel 6.React Query 7.React Hot Toast etc.
+
+Main Features--
+
+1.There is a home page about the site and the product that have resale offer.
+
+2.Click on the product, user will be redirect to login as well as sign up.
+
+3.Sign up page hase two types of user as buyer and seller.
+
+4.User will see select a catagory of product and the items that are avaiable. 
+
+5.By booking , user will book the product and as per user is buyer or seller, dashboard will render.
+
+6.Admin can log in and see all buyer and seller and can also choose to make admin.
+
+7.It is Authenticated with Firebase. User can log in with email,password, google sign in, basically.
+
+8.Footer is there to have clear idea about the authority.
+
+9. Contact page is to contanct with authority.
+
+10.There is a blog section to answer the asked question.
+
+About page is about answering the asked question.
+
+Contact page is givent to contact with the admin.
+
+Responsive SPA site etc...
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
