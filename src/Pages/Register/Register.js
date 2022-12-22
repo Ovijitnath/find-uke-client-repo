@@ -66,32 +66,7 @@ const Register = () => {
             <div className='w-96 p-4 bg-lime-50 border my-5'>
                 <h2 className='text-2xl text-center font-bold'>Sign Up</h2>
                 <form onSubmit={handleSubmit(handleSignUp)}>
-                    {/* <div className='p-5'>
-                        <p className='text-xl p-4'>I would like to Be:</p>
-                        <label className='px-5' htmlFor="field-buyer">
-                            <input
-                                {...register("buyer")}
-                                type="radio"
-                                name="weather"
-                                value="buyer"
-                                id="field-buyer"
-                                className="radio"
-                            />
-                            Buyer
-                        </label>
 
-                        <label htmlFor="field-seller">
-                            <input
-                                {...register("seller")}
-                                type="radio"
-                                name="weather"
-                                value="seller"
-                                id="field-seller"
-                                className="radio"
-                            />
-                            Seller
-                        </label>
-                    </div> */}
                     <div className="form-control w-full max-w-xs">
                         <label className="label"> <span className="label-text">Name</span></label>
                         <input type="text" {...register("name", {

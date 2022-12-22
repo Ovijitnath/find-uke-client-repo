@@ -13,6 +13,7 @@ const CheckoutForm = ({ booking }) => {
     const { price, email, name, _id } = booking;
 
     useEffect(() => {
+
         // Create PaymentIntent as soon as the page loads
         fetch("https://find-uke-server.vercel.app/create-payment-intent", {
             method: "POST",
