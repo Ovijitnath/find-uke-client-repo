@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+
 
 const SingleCatagoryDetails = ({ card, setModProducts }) => {
     const { name, description, image, resalePrice, location, originalPrice, yearOfUse,
@@ -13,7 +13,7 @@ const SingleCatagoryDetails = ({ card, setModProducts }) => {
                 <h2 className="card-title text-2xl text-center mx-auto">{name}</h2>
                 <p>{description}</p>
                 <div className="card-actions font-bold">
-                    {/* <div className='flex justify-evenly'> */}
+
                     <h5>Resale Price : ${resalePrice}</h5>
                     <br />
                     <h5>Original Price : ${originalPrice}</h5>
@@ -23,7 +23,7 @@ const SingleCatagoryDetails = ({ card, setModProducts }) => {
                     <h5>Seller Name : {sellerName}</h5>
                     <br />
                     <h5>posted Time : {postedTime}</h5>
-                    {/* </div> */}
+
 
                     <label htmlFor="booking-modal"
                         className="btn btn-success"
